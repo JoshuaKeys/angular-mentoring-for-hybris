@@ -1,0 +1,11 @@
+<section class="contacts">
+  <div class="contacts__container">
+    <h1>Contacts Page</h1>
+    <div *ngIf="userDetails">
+      <p><b>Name:</b> {{ userDetails.name }}</p>
+      <p><b>Search:</b> {{ userDetails.search }}</p>
+    </div>
+    <!-- <app-contacts></app-contacts> -->
+    <app-form-input (onSubmit)="onSubmit($event)"></app-form-input>
+  </div>
+</section>

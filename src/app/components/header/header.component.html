@@ -1,0 +1,24 @@
+<header class="header">
+  <div class="header__container">
+    <h1 class="header__title">{{ title }}</h1>
+    <nav class="header__nav">
+      <ul class="header__nav-container" *ngIf="auth">
+        <li class="header__nav-item">
+          <a routerLink="/home" class="header__nav-item-link">Home</a>
+        </li>
+        <li class="header__nav-item">
+          <a routerLink="/contacts" class="header__nav-item-link">Contacts</a>
+        </li>
+      </ul>
+
+      <ul class="header__nav-container" *ngIf="!auth">
+        <li class="header__nav-item">
+          <a routerLink="/home" class="header__nav-item-link">Login</a>
+        </li>
+        <li class="header__nav-item">
+          <a routerLink="/contacts" class="header__nav-item-link">Register</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
